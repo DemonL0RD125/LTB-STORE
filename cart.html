@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+   <header>
+    <nav>
+      <ul>
+        <li>
+          <h1>LTB STORE</h1>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <h1>🛒 Your Cart</h1>
+  <ul id="cart-list"></ul>
+
+  <div class="button-container">
+  <a href="index.html"><button class="left-button">Back to Home</button></a>
+  </div>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartList = document.getElementById('cart-list');
+
+    if (cart.length === 0) {
+      cartList.innerHTML = '<li>Your cart is empty.</li>';
+    } else {
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        cartList.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>

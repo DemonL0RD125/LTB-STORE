@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LTB STORE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+    <nav>
+      <ul>
+        <li>
+          <h1>LTB STORE</h1>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="left-buttons">
+  <button class="left" onclick="showCannedGoods()">Canned Goods</button>
+  <button class="left" onclick="showDrinks()">Drinks</button>
+  <button class="left" onclick="showCookingRecipes()">Cooking Recipes</button>
+  </div>
+  
+  <div class="right-button">
+  <a href="cart.html"><button class="right">Go to Cart</button></a>
+  </div>
+
+  <div id="canned-goods" class="product-container">
+    <h2>Canned Goods</h2>
+    <div class="product-grid">
+       <div class="product-card">
+        <p>Argentina Beef Loaf</p>
+        <img src="https://sdcglobalchoice.com/wp-content/uploads/2021/07/argentina-beef-loaf-150g.png" alt="Argentina Beef Loaf" onclick="addToCart('Argentina Beef Loaf')">
+      </div>
+      
+      <div class="product-card">
+        <p>Argentina Corned Beef</p>
+      <img src="https://www.goshoppi.ae/libraries/image.php?quality=100&&image=https://www.goshoppi.ae/images/variants/Argentina-Corned-Beef-175g.jpg" alt="Corned Beef" onclick="addToCart('Corned Beef')">
+      </div>
+
+      <div class="product-card">
+        <p>Luncheon Meat</p>
+      <img src="https://5.imimg.com/data5/SU/XN/MY-1162169/luncheon-meats-1000x1000.jpg" alt="Luncheon Meat" onclick="addToCart('Luncheon Meat')">
+      </div>
+
+      <div class="product-card">
+        <p>555 Caldereta</p>
+        <img src="https://images.freshop.com/1564405684702504529/0c8ff68c372be3952b4497327e4ce5ed_large.png" alt="555 Caldereta" onclick="addToCart('555 Caldereta')">
+      </div>
+
+      <div class="product-card">
+        <p>Fresca Tuna</p>
+        <img src="https://sdcglobalchoice.com/wp-content/uploads/2021/07/fresca-canned-seafood-fresca-tuna-flakes-hot-spicy-175g-14965450899588_1024x.jpg" alt="Fresca Tuna" onclick="addToCart('Fresca Tuna')">
+      </div>
+    </div>
+   </div>
+
+   <div id="drinks" class="product-container">
+    <h2>Drinks</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <p>Coke 1 Litre</p>
+        <img src="https://live.staticflickr.com/3343/4561484563_f077965678_b.jpg" alt="Coke 1 Litre" onclick="addToCart('Coke 1 Litre')">
+      </div>
+
+      <div class="product-card">
+        <p>Coke 1.5 Litre</p>
+        <img src="https://thfvnext.bing.com/th/id/OIP.JEgl_wweWp5vav0TIs1JrgHaHa?w=218&h=218&c=7&r=0&o=5&cb=thfvnext&dpr=1.3&pid=1.7" alt="Coke 1.5 Litre" onclick="addToCart('Coke 1.5 Litre')">
+      </div>
+
+      <div class="product-card">
+        <p>Royal 1.5 Litre</p>
+        <img src="https://thfvnext.bing.com/th/id/OIP.NC4J2clAIQBzjZcLJuh72AHaHa?w=179&h=180&c=7&r=0&o=5&cb=thfvnext&dpr=1.3&pid=1.7" alt="Royal 1.5 Litre" onclick="addToCart('Royal 1.5 Litre')">
+    </div> 
+
+      <div class="product-card">
+        <p>Sprite 1 Litre</p>
+        <img src="https://thfvnext.bing.com/th/id/OIP.N8PHNixsxvbUaJjUPqC7ogHaHa?w=182&h=183&c=7&r=0&o=7&cb=thfvnext&dpr=1.3&pid=1.7&rm=3" alt="Sprite 1 Litre" onclick="addToCart('Sprite 1 Litre')">
+      </div>
+
+      <div class="product-card">
+        <p>Mountain Dew 12oz</p>
+        <img src="https://thfvnext.bing.com/th/id/OIP.vcScuu-NgFAqg8TSHTmkUQHaHa?w=202&h=202&c=7&r=0&o=7&cb=thfvnext&dpr=1.3&pid=1.7&rm=3" alt="Mountain Dew 12 oz" onclick="addToCart('Mountain Dew 12oz')">
+      </div>
+    </div>
+   </div>
+
+    <div id="cooking-recipes" class="product-container">
+      <h2>Cooking Recipes</h2>
+      <div class="product-grid">
+      <div class="product-card">
+        <p>Garlic</p>
+        <img src="https://thfvnext.bing.com/th/id/OIP.PUi1V-q3QZZLZFc40f9h3AHaE9?w=271&h=181&c=7&r=0&o=7&cb=thfvnext&dpr=1.3&pid=1.7&rm=3" alt="Garlic" onclick="addToCart('Garlic')">
+      </div>
+      
+      <div class="product-card">
+        <p>Onion</p>
+        <img src="https://thfvnext.bing.com/th/id/OIP.LXJb0_aPyQKxPXHCOzFubwHaH5?w=183&h=195&c=7&r=0&o=7&cb=thfvnext&dpr=1.3&pid=1.7&rm=3" alt="Onion" onclick="addToCart('Onion')">
+      </div>
+
+      <div class="product-card">
+        <p>Laurel</p>
+        <img src="data:image/webp;base64,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" alt="Laurel" onclick="addToCart('Laurel')">
+      </div>
+    </div>
+  </div>
+      
+<script>
+  function showCannedGoods() {
+    document.getElementById("canned-goods").style.display = "flex";
+    document.getElementById("drinks").style.display = "none";
+    document.getElementById("cooking-recipes").style.display = "none";
+  }
+
+  function showDrinks() {
+    document.getElementById("drinks").style.display = "flex";
+    document.getElementById("canned-goods").style.display = "none";
+    document.getElementById("cooking-recipes").style.display = "none";
+  }
+
+  function showCookingRecipes() {
+  document.getElementById("cooking-recipes").style.display = "flex";
+  document.getElementById("canned-goods").style.display = "none";
+  document.getElementById("drinks").style.display = "none";
+  }
+</script>
+
+<script>
+  function addToCart(productName) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(productName);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(productName + " added to cart!");
+  }
+</script>
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html> 
