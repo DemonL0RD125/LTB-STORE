@@ -60,9 +60,9 @@ body {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  padding: 30px 15px;
+  padding: 10px 15px 30px 15px;
   width: 100%;
-  min-height: 100vh;
+  margin-bottom: 80vh;
 }
 
 .image-button {
