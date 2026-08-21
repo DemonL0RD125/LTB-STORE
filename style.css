@@ -60,7 +60,7 @@ body {
   gap: 15px;
   padding: 30px 15px;
   width: 100%;
-  min-height: 50vh;
+  min-height: 100vh;
 }
 
 .image-button {
