@@ -1,8 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background: linear-gradient(#E67E22, khaki);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .top-box {
@@ -17,6 +29,7 @@ body {
   align-items: center;
   margin: 0;
   text-align: center;
+  padding: 0 10px;
 }
 
 .top-box h1 {
@@ -25,7 +38,7 @@ body {
   border: 2px solid white;
   margin: 0;
   color: white;
-  font-size: 50px;
+  font-size: clamp(24px, 6vw, 50px);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
 }
 
@@ -33,33 +46,32 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
   border: 2px solid white;
-  margin: 0;
-  margin-top: 10px; 
+  margin: 10px 0 0 0; 
   color: white;
-  font-size: 20px;
+  font-size: clamp(14px, 3vw, 20px);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-.container, .nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 30px 0;
-    width: 100%;
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 30px 15px;
+  width: 100%;
+  min-height: 50vh;
 }
 
 .image-button {
-  margin: 0 10px; 
-  padding: 15px 40px; 
+  padding: 12px 25px; 
   background-color: #D35400;
   color: white;
   text-decoration: none;
   text-align: center;
   border-radius: 50px; 
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  min-width: 150px;    
   display: inline-block; 
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; 
   box-shadow: 0px 4px 10px rgba(0,0,0,0.3); 
@@ -67,41 +79,27 @@ body {
 
 .image-button:hover {
   background-color: #2C3E50;
-  transform: scale(1.15); 
+  transform: scale(1.05); 
   box-shadow: 0px 8px 15px rgba(0,0,0,0.4); 
-}
-.container {
-  display: grid;         
-  grid-template-columns: 1fr;
-  justify-items: center; 
-  gap: 20px;        
-  padding: 40px 0;  
-  width: 100%;
-}
-
-.image-button[href="image-gallery.html"] {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  text-align: center;
 }
 
 .footer-wraper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 80px;
-    padding: 60px 40px;
-    background-color: #2C3E50;
-    color: white;
-    margin-top: 370px; 
-    border-top: 5px solid black;
-    flex-wrap: wrap;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #2C3E50;
+  color: white;
+  border-top: 5px solid black;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .contact-details a {
   display: inline-block;
-  padding: 12px 30px;   
+  padding: 10px 20px;   
   background-color: navy;
   color: white;
   text-decoration: none;
@@ -110,11 +108,21 @@ body {
   margin-top: 10px;
 }
 
-@media screen and (max-width: 768px) {
-  .menu-card {
-    flex-direction: column;
+@media screen and (max-width: 600px) {
+  .navbar {
+    gap: 10px;
+    padding: 20px 10px;
   }
-  .container {
-    padding: 10px;
+  
+  .image-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    flex: 1 1 auto;
+  }
+
+  .footer-wraper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
