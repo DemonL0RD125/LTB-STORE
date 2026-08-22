@@ -6,7 +6,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 150vh; 
   background: linear-gradient(#E67E22, khaki);
   background-repeat: no-repeat;
   background-attachment: fixed;
