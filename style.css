@@ -2,26 +2,23 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 180vh;
   background: linear-gradient(#E67E22, khaki);
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
 
 .top-box {
   background-image: url('https://images.unsplash.com/photo-1682778418768-16081e4470a1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D'); 
   background-size: cover;
   background-position: center;
-  height: 500px; 
+  height: 220px; 
   width: 100%;
   display: flex; 
   flex-direction: column;
@@ -29,7 +26,7 @@ body {
   align-items: center;
   margin: 0;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .top-box h1 {
@@ -37,9 +34,9 @@ body {
   backdrop-filter: blur(5px);
   border: 2px solid white;
   margin: 0;
-  padding: 5px 20px;
+  padding: 4px 15px;
   color: white;
-  font-size: clamp(24px, 6vw, 50px);
+  font-size: clamp(20px, 5vw, 40px);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
 }
 
@@ -48,35 +45,38 @@ body {
   backdrop-filter: blur(5px);
   border: 2px solid white;
   margin: 10px 0 0 0; 
-  padding: 8px 20px;
+  padding: 6px 15px;
   color: white;
-  font-size: clamp(14px, 3vw, 20px);
+  font-size: clamp(12px, 3vw, 18px);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .navbar {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  padding: 10px 15px 30px 15px;
+  gap: 10px;
+  padding: 20px 10px;
   width: 100%;
-  margin-bottom: 80vh;
+  margin-bottom: 20px;
 }
 
 .image-button {
-  padding: 12px 25px; 
+  padding: 12px 0; 
+  flex: 1;
+  max-width: 120px;
   background-color: #D35400;
   color: white;
   text-decoration: none;
   text-align: center;
   border-radius: 50px; 
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   display: inline-block; 
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; 
   box-shadow: 0px 4px 10px rgba(0,0,0,0.3); 
+  white-space: nowrap;
 }
 
 .image-button:hover {
@@ -85,6 +85,53 @@ body {
   box-shadow: 0px 8px 15px rgba(0,0,0,0.4); 
 }
 
+
+.menu-card {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden; 
+  width: 90%;
+  max-width: 950px; 
+  margin: 20px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.menu-image {
+  flex: 1;
+  min-width: 40%;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.menu-info {
+  flex: 1.5; 
+  padding: 30px;
+}
+
+.menu-info h2 {
+  color: #D35400; 
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-list li {
+  display: flex;
+  justify-content: space-between; 
+  padding: 10px 0;
+  border-bottom: 1px dashed #ddd; 
+}
+
+/* --- FOOTER --- */
 .footer-wraper {
   margin-top: auto;
   display: flex;
@@ -110,16 +157,9 @@ body {
   margin-top: 10px;
 }
 
-@media screen and (max-width: 600px) {
-  .navbar {
-    gap: 10px;
-    padding: 20px 10px;
-  }
-  
-  .image-button {
-    padding: 10px 15px;
-    font-size: 14px;
-    flex: 1 1 auto;
+@media screen and (max-width: 768px) {
+  .menu-card {
+    flex-direction: column;
   }
 
   .footer-wraper {
