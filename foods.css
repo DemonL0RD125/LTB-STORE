@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   background: linear-gradient(#E67E22, khaki);
@@ -9,7 +17,6 @@ body {
   background-image: url('https://images.unsplash.com/photo-1682778418768-16081e4470a1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D'); 
   background-size: cover;
   background-position: center;
-  height: 300px; 
   width: 100%;
   display: flex; 
   flex-direction: column;
@@ -17,6 +24,7 @@ body {
   align-items: center;
   margin: 0;
   text-align: center;
+  padding: 0 20px;
 }
 
 .top-box h1 {
@@ -24,8 +32,9 @@ body {
   backdrop-filter: blur(5px);
   border: 2px solid white;
   margin: 0;
+  padding: 5px 20px;
   color: white;
-  font-size: 50px;
+  font-size: clamp(24px, 6vw, 50px);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
 }
 
@@ -33,32 +42,33 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
   border: 2px solid white;
-  margin: 0;
-  margin-top: 10px; 
+  margin: 10px 0 0 0; 
+  padding: 8px 20px;
   color: white;
-  font-size: 20px;
+  font-size: clamp(14px, 3vw, 20px);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-.container, .nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 0;
-    width: 100%;
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 15px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .image-button {
-  margin: 0 10px; 
-  padding: 15px 40px; 
+  padding: 11px 55px; 
   background-color: #D35400;
   color: white;
   text-decoration: none;
   text-align: center;
   border-radius: 50px; 
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  min-width: 150px;    
   display: inline-block; 
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; 
   box-shadow: 0px 4px 10px rgba(0,0,0,0.3); 
@@ -66,17 +76,33 @@ body {
 
 .image-button:hover {
   background-color: #2C3E50;
-  transform: scale(1.15); 
+  transform: scale(1.05); 
   box-shadow: 0px 8px 15px rgba(0,0,0,0.4); 
 }
 
-.container {
-  display: grid;         
-  grid-template-columns: 1fr;
-  justify-items: center; 
-  gap: 20px;        
-  padding: 40px 0;  
+.footer-wraper {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #2C3E50;
+  color: white;
+  border-top: 5px solid black;
+  flex-wrap: wrap;
   width: 100%;
+}
+
+.contact-details a {
+  display: inline-block;
+  padding: 10px 20px;   
+  background-color: navy;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .menu-card {
@@ -122,30 +148,6 @@ body {
     justify-content: space-between; 
     padding: 10px 0;
     border-bottom: 1px dashed #ddd; 
-}
-
-.footer-wraper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 80px;
-    padding: 60px 40px;
-    background-color: #2C3E50;
-    color: white;
-    margin-top: 100px; 
-    border-top: 5px solid black;
-    flex-wrap: wrap;
-}
-
-.contact-details a {
-  display: inline-block;
-  padding: 12px 30px;   
-  background-color: navy;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-top: 10px;
 }
 
 @media screen and (max-width: 768px) {
